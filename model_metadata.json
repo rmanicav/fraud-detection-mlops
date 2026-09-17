@@ -1,0 +1,16 @@
+{
+    "model_type": "RandomForestClassifier",
+    "n_estimators": 200,
+    "class_weight": "balanced",
+    "threshold": 0.27,
+    "features": [
+        "amount",
+        "transaction_hour",
+        "customer_age",
+        "previous_transactions",
+        "account_age_days",
+        "device_risk_score",
+        "location_risk_score"
+    ],
+    "created_at": "2026-09-17T08:06:26.515423"
+}

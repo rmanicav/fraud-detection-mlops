@@ -1,0 +1,6 @@
+{
+    "production_model": "v1",
+    "model_path": "fraud_detection_model.pkl",
+    "updated_at": "2026-09-17T08:11:27.333946",
+    "status": "active"
+}

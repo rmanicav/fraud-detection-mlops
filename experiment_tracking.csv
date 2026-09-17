@@ -1,0 +1,2 @@
+timestamp,model,n_estimators,class_weight,threshold
+2026-09-17T08:11:59.153898,RandomForestClassifier,200,balanced,0.27
