@@ -89,9 +89,7 @@ Account age
 Device risk score
 Location risk score
 Why threshold optimization?
-
 Fraud detection is an imbalanced classification problem.
-
 Accuracy alone can be misleading because legitimate transactions greatly outnumber fraudulent transactions.
 
 Therefore, the project evaluates:
@@ -132,16 +130,14 @@ Production Model
      v1
       ↓
 fraud_detection_model.pkl
-Experiment Tracking
 
+Experiment Tracking
 experiment_tracking.csv records model configuration and experiment information.
 
 Data Drift Detection
-
 The project uses the Kolmogorov-Smirnov test to compare training and production-like feature distributions.
 
 Example production drift simulation:
-
 production_data["amount"] = production_data["amount"] * 1.8
 production_data["device_risk_score"] = (
     production_data["device_risk_score"] + 0.15
@@ -244,7 +240,9 @@ Data	Pandas / NumPy
 Statistics	SciPy
 Containerization	Docker
 Version Control	Git / GitHub
+
 🔄 End-to-End Workflow
+
 Data
  ↓
 Feature Engineering
@@ -268,34 +266,28 @@ Automated Testing
 Production Monitoring
  ↓
 Drift Detection
+
 💡 Key Engineering Decisions
 Why Random Forest?
-
 Random Forest provides a strong baseline for tabular fraud data and can model nonlinear relationships without requiring extensive feature transformations.
 
 Why optimize the threshold?
-
 The default classification threshold is not necessarily appropriate for fraud detection.
-
 A lower threshold can increase fraud recall but may also increase false positives.
-
 The appropriate operating point depends on the business cost of:
 
 False Positive
 vs.
 False Negative
+
 Why monitor drift?
-
 A model can perform well during development but encounter a different feature distribution in production.
-
 Monitoring helps identify changes that may require investigation, retraining, or changes to the decision process.
 
 ⚠️ Limitations
 
 This project is designed as an educational and portfolio demonstration.
-
 The dataset is synthetic and the fraud labels are generated using artificial rules.
-
 A production system would additionally require:
 
 Real transaction data
@@ -318,7 +310,7 @@ Business-cost-based threshold selection
 This project demonstrates practical experience across the ML lifecycle:
 
 Machine Learning
-        +
+       +
 Software Engineering
         +
 API Development
