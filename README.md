@@ -1,46 +1,70 @@
 # Fraud Detection MLOps
 
-End-to-end fraud detection project using Machine Learning and MLOps practices.
+An end-to-end fraud detection system demonstrating practical Machine Learning and MLOps engineering practices, from model training and threshold optimization to API deployment and production monitoring.
 
-## Model
+## 🚀 Project Overview
 
-- Random Forest Classifier
-- Class imbalance handling
-- Probability threshold optimization
-- Cross-validation
-- ROC-AUC
-- Average Precision
-- Precision / Recall / F1
+This project simulates a real-world fraud detection pipeline.
 
-## MLOps
+The system:
 
-- Model serialization
-- Model metadata
-- Model versioning
-- Model registry
-- Experiment tracking
-- Data drift detection
-- Prediction monitoring
-- FastAPI serving
-- Automated API tests
-- Docker deployment
+1. Generates transaction data
+2. Trains a Random Forest classifier
+3. Handles class imbalance
+4. Evaluates model performance
+5. Optimizes the fraud decision threshold
+6. Packages and versions the trained model
+7. Serves predictions through FastAPI
+8. Validates API inputs
+9. Monitors prediction behavior
+10. Detects data drift
+11. Provides automated API tests
+12. Supports Docker deployment
 
-## Architecture
+## 🏗️ Architecture
 
-Data
-→ Model Training
-→ Evaluation
-→ Model Packaging
-→ Model Registry
-→ FastAPI
-→ Monitoring
-
-## API
-
-POST `/predict`
-
-GET `/health`
-
-## Limitations
-
-The dataset is synthetic and the project is intended as an educational/portfolio demonstration.
+```text
+                    ┌──────────────────┐
+                    │ Transaction Data │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Data Preparation │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Random Forest ML │
+                    └────────┬─────────┘
+                             │
+                  ┌──────────┴──────────┐
+                  │                     │
+                  ▼                     ▼
+          ┌──────────────┐      ┌───────────────┐
+          │ Model        │      │ Threshold     │
+          │ Evaluation   │      │ Optimization  │
+          └──────┬───────┘      └───────┬───────┘
+                 │                      │
+                 └──────────┬───────────┘
+                            ▼
+                   ┌─────────────────┐
+                   │ Model Packaging │
+                   └────────┬────────┘
+                            │
+                            ▼
+                   ┌─────────────────┐
+                   │ FastAPI Service │
+                   └────────┬────────┘
+                            │
+                            ▼
+                   ┌─────────────────┐
+                   │ Predictions     │
+                   └────────┬────────┘
+                            │
+                  ┌─────────┴─────────┐
+                  ▼                   ▼
+          ┌──────────────┐    ┌──────────────┐
+          │ Drift        │    │ Prediction   │
+          │ Detection    │    │ Monitoring   │
+          └──────────────┘    └──────────────┘
