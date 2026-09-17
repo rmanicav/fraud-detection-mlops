@@ -69,14 +69,15 @@ The system:
           │ Detection    │    │ Monitoring   │
           └──────────────┘    └──────────────┘
 
-##Machine Learning
-Model
-Random Forest Classifier
-200 trees
-class_weight="balanced"
-Probability-based fraud classification
-Optimized decision threshold
-Features
+## Machine Learning
+
+### Model
+
+- Random Forest Classifier
+- 200 trees
+- `class_weight="balanced"`
+- Probability-based fraud classification
+- Optimized decision threshold
 
 The model uses:
 
