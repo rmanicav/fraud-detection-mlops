@@ -69,6 +69,8 @@ The system:
           │ Detection    │    │ Monitoring   │
           └──────────────┘    └──────────────┘
 
+```
+
 ## Machine Learning
 
 ### Model
